@@ -39,7 +39,7 @@ for(let i=0; i<=A.length-1; i++){
     }
 
     if (leftSum === rightSum){
-        console.log(i)
+        console.log(i);
     }
 
 }
