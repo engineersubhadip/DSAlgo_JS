@@ -10,4 +10,9 @@ for (let i=0; i<array.length; i++){
     }
 }
 
-console.log(hashmap);
+// console.log(hashmap);
+
+// Iterating in a hashmap
+for (let [key,val] of hashmap){
+    console.log(key,hashmap.get(key));
+}
