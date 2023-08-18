@@ -1,6 +1,6 @@
-const C = [1,2,3,4,9];
+const C = [1,2,3,4,4];
 let A = 5;
-let B = 12;
+let B = 8;
 
 // Left and Right denotes the Window Size
 let left = 1;
@@ -21,7 +21,7 @@ function scenarioCheck(refWindowSize,array,refSumValue){
     }
 
     if (runningSum > refSumValue){
-        return [false];
+        return false;
     }
 
     runningMaxValue = Math.max(runningMaxValue, runningSum);
@@ -32,7 +32,7 @@ function scenarioCheck(refWindowSize,array,refSumValue){
         runningSum = runningSum - array[start-1] + array[end];
         
         if (runningSum > refSumValue){
-            return [false];
+            return false;
         }
 
         runningMaxValue = Math.max(runningMaxValue, runningSum);
@@ -41,7 +41,10 @@ function scenarioCheck(refWindowSize,array,refSumValue){
         end++;
     }
 
-    // refMaxValue = runningMaxValue;
+    // if (runningMaxValue === 0){
+    //     return [false];
+    // }
+    refMaxValue = runningMaxValue;
     
     return [true,runningMaxValue];
 
