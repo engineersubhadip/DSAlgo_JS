@@ -16,3 +16,7 @@ for (let i=0; i<array.length; i++){
 for (let [key,val] of hashmap){
     console.log(key,hashmap.get(key));
 }
+
+// To get the Length of the hashmap:-
+
+let length = hashmap.size;
