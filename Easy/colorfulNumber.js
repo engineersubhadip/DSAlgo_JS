@@ -1,4 +1,4 @@
-let A = 23;
+let A = 236;
 
 const array = [];
 
@@ -40,7 +40,6 @@ for (let i=0; i<array.length; i++){
         }
     }
 }
-
 console.log(true);
 
 
