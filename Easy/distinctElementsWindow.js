@@ -1,3 +1,7 @@
+// You are given an array of N integers, A1, A2 ,..., 
+// AN and an integer B. Return the of count of distinct numbers in all windows of size B.
+
+
 const A = [1, 2, 1, 3, 4, 3];
 let B = 3;
 
