@@ -22,6 +22,7 @@ let B = 381;
 // console.log(count);
 
 // Approach-02: Short Code with fewer IF ELSE:- Optimized Way of Writing Hashmap JS Code
+// https://www.scaler.com/help_requests/811659/?ref=join-call-now - Explanation
 
 let hashmap = new Map();
 let mod = BigInt(1e9+7);
