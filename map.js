@@ -20,3 +20,6 @@ for (let [key,val] of hashmap){
 // To get the Length of the hashmap:-
 
 let length = hashmap.size;
+
+// Delete an element from a Map:-
+// hashmap.delete(key_Name)
