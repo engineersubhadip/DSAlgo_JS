@@ -55,7 +55,8 @@ for (let i=0; i<B.length; i++){
     y2 = E[i]-1;
 
 
-    let runningSum = prefixSumMatrix[x2][y2] % mod;
+    let runningSum = 0;
+    runningSum += prefixSumMatrix[x2][y2] % mod;
 
     if (x1>0){
         runningSum = (runningSum -  prefixSumMatrix[x1-1][y2] + mod) % mod;
