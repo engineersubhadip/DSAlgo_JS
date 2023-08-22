@@ -38,8 +38,14 @@ function prefix2DSum(matrix){
     }
 
     //! Col Wise Prefix Sum:-
-    
 
+    for (let i=1; i<rowCount; i++){
+        for (let j=0; j<colCount; j++){
+            prefixSum[i][j] += prefixSum[i-1][j];
+        }
+    }
+
+    return prefixSum;
     
 }   
 
