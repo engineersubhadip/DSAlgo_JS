@@ -25,15 +25,22 @@ function prefix2DSum(matrix){
         prefixSum.push(container);
     }
     
+    // ! Row Wise Prefix Sum:-
+
     for (let i=0;i<rowCount;i++){
-        console.log(matrix[i][0]);
-        prefixSum[i][0] += matrix[i][0];
+        for (let j=0; j<colCount; j++){
+            if (j === 0){
+                prefixSum[i][j] = matrix[i][j];
+            }else{
+                prefixSum[i][j] = prefixSum[i][j-1]+matrix[i][j];
+            }
+        }
     }
 
-    for (let i=0; i<rowCount;i++){
-        console.log(prefixSum[i]);
-    }
-    return prefixSum;
+    //! Col Wise Prefix Sum:-
+    
+
+    
 }   
 
 console.log(prefix2DSum(A));
