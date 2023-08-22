@@ -1,5 +1,5 @@
-const nums = [1,2,3,4];
-let k = 5;
+const nums = [3,1,3,4,3];
+let k = 6;
 
 // ! 2 Pointer Approach
 
