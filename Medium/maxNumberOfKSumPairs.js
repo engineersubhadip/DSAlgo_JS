@@ -3,6 +3,7 @@
 
 // // ! 2 Pointer Approach
 
+
 // nums.sort((a,b) => a-b);
 
 // let iPointer = 0;
@@ -22,6 +23,7 @@
 // }
 
 // console.log(count);
+
 
 // ! Hashmap Appraoch:-
 
