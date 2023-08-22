@@ -19,6 +19,9 @@ for (let i=0; i<A.length;i++){
         continue;
     }
 
+// * We are using Continue above, because if we encounter a negative value, we will not initialize our
+// * FinalStart and FinalEnd pointers as the negative element can never be part of our answer
+
     if (runningSum > maxSum){
         maxSum = runningSum;
         finalStart = startPoint;
