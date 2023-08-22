@@ -8,15 +8,16 @@ let runningSum = 0;
 let count = 0;
 
 for (let i=0; i<nums.length; i++){
-    runningSum += nums[i];
-    if (hashmap.has(runningSum % k)){
-        count+= hashmap.get(runningSum % k)
+    runningSum = runningSum + nums[i];
+    let another = (runningSum % k + k) % k;
+    if (hashmap.has(another)){
+        count+= hashmap.get(another)
     }
-
-    if (hashmap.has(runningSum % k)){
-        hashmap.set(runningSum % k,hashmap.get(runningSum % k)+1)
+    
+    if (hashmap.has(another)){
+        hashmap.set(another,hashmap.get(another)+1)
     }else{
-        hashmap.set(runningSum % k,1);
+        hashmap.set(another,1);
     }
 }
 
