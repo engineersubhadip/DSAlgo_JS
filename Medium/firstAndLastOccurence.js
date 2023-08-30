@@ -22,3 +22,27 @@ while (leftFirst <= rightFirst){
     }
 }
 
+// console.log(first);
+// ! Last Occurence:-
+
+let second = null;
+
+let leftSecond = 0;
+let rightSecond = A.length-1;
+
+while (leftSecond <= rightSecond){
+    let mid = Math.floor((leftSecond+rightSecond)/2);
+
+    if (A[mid] === B){
+        second = mid;
+        leftSecond = mid+1;
+    }
+
+    if (A[mid] < B){
+        leftSecond = mid+1;
+    }else{
+        rightSecond = mid-1;
+    }
+}
+
+console.log(first,second);
