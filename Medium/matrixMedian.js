@@ -1,5 +1,5 @@
 const A = [[1, 3, 5],[2, 6, 9],[3, 6, 9]];
-
+// https://www.scaler.com/help_requests/818197/?ref=join-call-now
 function checkScenario(matrix,refElement){
     let rowCount = matrix.length;
     let colCount = matrix[0].length;
