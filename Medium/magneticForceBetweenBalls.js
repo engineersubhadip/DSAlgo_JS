@@ -36,3 +36,4 @@ while (left <= right){
 }
 
 console.log(ans);
+
