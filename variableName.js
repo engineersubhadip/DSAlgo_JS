@@ -40,7 +40,25 @@ So there is no issue of misguiding */
 // }
 // console.log('The end of the Loop');
 
-// ! For Loop:-
-for (let i=1; i<=10; i++){
-    console.log(i);
+// // ! For Loop:-
+// for (let i=1; i<=10; i++){
+//     console.log(i);
+// }
+
+// Even Odd Numbers in a Range:-
+
+function checkNumber(number){
+    if (number % 2 == 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+for (let i=1; i<=50; i++){
+    if (checkNumber(i)){
+        console.log(i,"is","Even \n");
+    }else{
+        console.log(i,"is","Odd \n");
+    }
 }
