@@ -39,3 +39,8 @@ So there is no issue of misguiding */
 //     i+=1;
 // }
 // console.log('The end of the Loop');
+
+// ! For Loop:-
+for (let i=1; i<=10; i++){
+    console.log(i);
+}
