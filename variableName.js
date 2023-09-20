@@ -47,18 +47,53 @@ So there is no issue of misguiding */
 
 // Even Odd Numbers in a Range:-
 
-function checkNumber(number){
-    if (number % 2 == 0){
-        return true;
-    }else{
-        return false;
-    }
-}
+// function checkNumber(number){
+//     if (number % 2 == 0){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
 
-for (let i=1; i<=50; i++){
-    if (checkNumber(i)){
-        console.log(i,"is","Even \n");
-    }else{
-        console.log(i,"is","Odd \n");
-    }
-}
+// for (let i=1; i<=50; i++){
+//     if (checkNumber(i)){
+//         console.log(i,"is","Even \n");
+//     }else{
+//         console.log(i,"is","Odd \n");
+//     }
+// }
+
+// Console.log Return Type
+
+// function welcome(name){
+//     return "Hello "+name+" welcome to JS";
+// }
+
+// let value = welcome("Subhadip");
+// console.log(value);
+
+// let x = console.log("Hey Subhadip");
+
+// let a;
+// console.log(typeof a);
+
+// console.log(12 && "sandipan");
+
+// console.log(NaN || NaN);
+
+// * Increment Operator:-
+
+// let y = 10;
+// y = y++;
+// console.log(y);
+
+
+// * Do While Loop;
+let x = 5;
+
+do {
+    console.log(x);
+    x++;
+}while(x < 10);
+
+
