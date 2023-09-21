@@ -83,17 +83,31 @@ So there is no issue of misguiding */
 
 // * Increment Operator:-
 
-// let y = 10;
-// y = y++;
-// console.log(y);
+var y = 10;
+y = y++;
+console.log(y);
 
+buff = 11
+y = 11
+y = 10
+
+// var x = 12;
+// let y = x++;
+// console.log(x,y);
+
+// buff = 13;
+// x = 13
+// y = 12
+
+++,-- > = :- prefix
+= > ++,-- : postfix
 
 // * Do While Loop;
-let x = 5;
+// let x = 5;
 
-do {
-    console.log(x);
-    x++;
-}while(x < 10);
+// do {
+//     console.log(x);
+//     x++;
+// }while(x < 10);
 
 
