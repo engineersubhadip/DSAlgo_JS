@@ -1,8 +1,9 @@
-let number = 709;
+let number = 7778;
 let convertedNumber = String(number);
 
 let start = 0;
 let end = convertedNumber.length - 1;
+let flag = undefined;
 
 
 while (start < end){
@@ -10,11 +11,13 @@ while (start < end){
         start++;
         end--;
     }else{
-        console.log("Not a Pallindrome");
+        flag = true;
         break;
     }
 }
 
-if (start > end){
-    console.log("Pallindrome");
+if (flag == true){
+    console.log("Not a Pallindrome");
+}else{
+    console.log("It is a Pallindrome");
 }
