@@ -1,4 +1,4 @@
-let s = "abc";
+let s = "abcabc";
 
 let hmShort = new Map();
 
@@ -29,3 +29,14 @@ while (right < s.length){
 }
 
 console.log(count);
+
+// 0 1 2 3 4 5
+// a b c a b c
+//       j
+//           R
+
+// ans = j+1 = 1(abc)+2(bca,abca)+3(cab,bcab,abcab)+4(abc,cabc,bcabc,abcabc)
+// hm:
+// a:1
+// b:1
+// c:1
