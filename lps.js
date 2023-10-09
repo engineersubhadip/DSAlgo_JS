@@ -44,9 +44,16 @@ function kmp(string){
 
 let string = "aabaaba";
 
-let value = kmp(string);
+let lpsArray = new Array(string.length).fill(0);
+let index = 0;
 
-console.log(value);
+for (let i=0; i<string.length; i++){
+    let value = kmp(string.slice(0,i+1));
+    lpsArray[index] = value;
+    index+=1;
+}
+
+console.log(lpsArray);
 
 
 
