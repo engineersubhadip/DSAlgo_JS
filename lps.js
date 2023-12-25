@@ -42,7 +42,20 @@ function kmp(string){
     return maxValue;
 }
 
-let string = "aabaaba";
+// "adacd" : 0 not
+// 
+
+
+// "dc"
+
+// "dcaaaz $ zaaacd"
+// "cdaaaz"
+
+        |
+1234#4321
+        2
+
+let string = "adacd#dcada";
 
 let lpsArray = new Array(string.length).fill(0);
 let index = 0;
