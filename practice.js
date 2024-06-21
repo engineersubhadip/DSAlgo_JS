@@ -37,7 +37,10 @@ function backtracking(runArr,index,lastSeen,hm)
     if (runArr.length === A.length)
     {
         let temp = [...runArr];
-        ans.push(temp);
+        if (temp.length > 1) // lets say the A = [41]. Then temp would have been [41]
+        {
+            ans.push(temp);
+        }
         return;
     }
 
