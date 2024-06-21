@@ -1,63 +1,53 @@
-// let x = [];
-// let y = [1,2,3,NaN,"Sri Krishna",true];
-// let z = ["abc","def","ghi"];
+let s = "penapplepen";
+let arr = ["apple","pen"];
+let hm = {};
 
-// console.log(x,y,z);
-
-// let string = "ab";
-
-// let result = 0;
-
-// for (let i=0; i<string.length; i++){
-//     console.log("ASCII VALUE IS ",string[i]," ",string[i].charCodeAt(0));
-// }
-
-// console.log(result);
-let string = "abcd";
-
-// for (let i=0; i<string.length; i++){
-//         for (let j=i;j<string.length;j++){
-//             let run = "";
-//                 for (let k=i;k<=j;k++){
-//                         run += string[k];
-//                     }
-//                 console.log(run);
-//                 }
-            
-//             }
-            
-// let string = "abcd";
-
-// for (let i=0; i<string.length; i++){
-//     let run = "";
-//     for (let k=0;k<=i;k++){
-//         run += string[k];
-//     }
-//     console.log(run);
-
-for (let i=string.length-1;i>=0;i--){
-    let run = "";
-    for (let k=i; k<string.length; k++){
-        run += string[k];
+for (let i=0; i<arr.length; i++)
+{
+    if (hm[arr[i]] === undefined)
+    {
+        hm[arr[i]] = 1;
     }
-    console.log(run);
-};
-    
+    else
+    {
+        hm[arr[i]] += 1;
+    }
+}
 
-//     // console.log(string.slice(0,i+1));
-    
-// }
-    i   
-0 1 2 3
-a b c d
-    0
+// let ans = false;
 
-lps[i] = longest prefix from 0 to i;
+function backtracking(runArr,index,hm)
+{
+    if (runArr.join('').length > s.length)
+    { 
+        return false;
+    }
+
+    if (runArr.join('').length === s.length)
+    {
+        let temp = [...runArr];
+        temp = temp.join('');
+        if (temp === s)
+        {
+            console.log("temp",temp);
+            // ans = true;
+        }
+        return temp === s;
+    }
+
+    for (let key in hm)
+    {
+        runArr.push(key);
+        let boolVal = backtracking(runArr,index+1,hm);
+        if (boolVal)
+        {
+            return true;
+        }
+        runArr.pop();
+    }
+}
 
 
-abc
+let ans = backtracking([],0,hm);
 
-pref:- a ab
-suff: c bc
-
-lps[2] : 0;
+console.log(ans);
