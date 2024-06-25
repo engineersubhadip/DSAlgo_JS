@@ -1,12 +1,17 @@
-function recursion(num)
+function recursion(arr,start,end)
 {
-    if (num === 1)
+    if (start >= end)
     {
-        console.log(num);
-        return;
+        return true;
     }
-    console.log(num);
-    recursion(num-1);
+
+    if (arr[start] !== arr[end])
+    {
+        return false;
+    }
+    return recursion(arr,start+1,end-1);
 }
 
-recursion(5);
+let ans = recursion("malayalam",0,"malaalam".length-1);
+
+console.log(ans);
