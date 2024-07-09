@@ -3,8 +3,8 @@
 // Given a pair of strings of equal lengths, Geek wants to find the better string. The better string is the string having more number of distinct subsequences.
 // If both the strings have equal count of distinct subsequence then return str1.
 
-let str1 = "gfg";
-let str2 = "ggg";
+let str1 = "busywyhviqbuucys";
+let str2 = "ctzipqppautfdsgy";
 
 let ans = {};
 
@@ -49,6 +49,12 @@ for (let key in ans)
     res2.push(key);
 }
 
-console.log("res1",res1);
-
-console.log("res2",res2)
+if (res1.length >= res2.length)
+{
+    console.log("res1",res1.length,"res2",res2.length);
+    console.log("str1",str1);
+}
+else
+{
+    console.log("str2",str2);
+}
