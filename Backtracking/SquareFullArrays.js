@@ -3,6 +3,10 @@ let arr = [1, 17, 8];
 // TC : O(SqrtM * N * N!)
 // SC : O(N[Recursive Stack Space] + M*K[M : Number of Perms; K : Avg Size of Perms])
 
+if (arr.length === 1)
+{
+    console.log(0);
+}
 
 let hm = {};
 for (let i=0; i<arr.length; i++)
