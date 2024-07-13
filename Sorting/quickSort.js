@@ -3,6 +3,7 @@ let arr = [12,13,9,8,23,4,1,6];
 console.log("Before Sorting",arr);
 
 function findPiv(arr,start,end)
+
 {
     let refEle = arr[start];
     let left = start+1;
