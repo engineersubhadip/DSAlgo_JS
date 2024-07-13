@@ -1,4 +1,6 @@
-let obj = {"g":8, "a":{"b":3,"c":{"f":5}}};
+// let obj = {"g":8, "a":{"b":3,"c":{"f":5}}};
+
+let obj = {a : { b : 3 , c : { f : 5 , x : { y : 12 } , g : 8 } } }
 
 // OP :- {"g":8, "a-b":3, "a-c-f":5}
 // TC : O(N) and SC : O(N) for the Recursive Stack Space
