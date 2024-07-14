@@ -13,7 +13,6 @@ function moveZeroes(mat)
         {
             if (mat[i][j] === 0)
             {
-                console.log("Yes",i,j)
                 refRow = i;
                 refCol = j;
                 break;
@@ -32,11 +31,6 @@ function moveZeroes(mat)
 
     let currRow = refRow;
     let currCol = refCol;
-
-    console.log("refRow",refRow);
-    console.log("refCol",refCol);
-    console.log("currRow",currRow);
-    console.log("currCol",currCol);
 
     while (currRow < row)
     {
