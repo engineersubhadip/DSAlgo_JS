@@ -1,42 +1,61 @@
-let arr = [3, 4, 5];
+let arr1 = [1,2,99,100,115];
+let arr2 = [2,5,99,5,1,5];
 
-if (arr.length === 0)
+arr1.sort((a,b) => a-b);
+
+let set = new Set();
+
+for (let i=0; i<arr2.length; i++)
 {
-    console.log([]);
+    set.add(arr2[i]);
 }
 
-let pfArr = new Array(arr.length).fill(0);
-pfArr[0] = arr[0];
-
-for (let i=1; i<arr.length; i++)
+for (let i=0; i<arr1.length; i++)
 {
-    pfArr[i] = pfArr[i-1] * arr[i];
-}
-
-let sfArr = new Array(arr.length).fill(0);
-sfArr[sfArr.length-1] = arr[arr.length-1];
-
-for (let i=arr.length-2; i>=0; i--)
-{
-    sfArr[i] = sfArr[i+1] * arr[i];
-}
-
-let res = [];
-
-for (let i=0; i<arr.length; i++)
-{
-    if (i === 0)
+    if (set.has(arr1[i]) === false)
     {
-        res.push(sfArr[i+1]);
-    }
-    else if (i === arr.length-1)
-    {
-        res.push(pfArr[i-1]);
-    }
-    else
-    {
-        res.push(pfArr[i-1] * sfArr[i+1]);
+        console.log(arr1[i]);
+        break;
     }
 }
 
-console.log(res);
+console.log(-1);
+// arr2.sort((a,b) => a-b);
+
+
+// let ans = -1;
+
+// let i = 0;
+// let j = 0;
+
+// while (i < arr1.length && j < arr2.length)
+// {
+//     if (arr1[i] === arr2[j])
+//     {
+//         let tempI = i;
+//         while (tempI < arr1.length && arr1[tempI] === arr1[i])
+//         {
+//             tempI += 1;
+//         }
+
+//         let tempJ = j;
+//         while (tempJ < arr2.length && arr2[tempJ] === arr2[j])
+//         {
+//             tempJ += 1;
+//         }
+
+//         i = tempI;
+//         j = tempJ;
+//     }
+//     else if (arr1[i] < arr2[j])
+//     {
+//         ans = arr1[i];
+//         break;
+//     }
+//     else if (arr2[j] < arr1[i])
+//     {
+//         j ++;
+//     }
+// }
+
+// console.log(ans);
