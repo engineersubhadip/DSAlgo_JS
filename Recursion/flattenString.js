@@ -1,4 +1,4 @@
-let str = "3[b2[ca]]"; // abbabb
+let str = "3[b2[ca]]"; // bcacabcacabcaca
 
 
 // [2,a,2,b]
