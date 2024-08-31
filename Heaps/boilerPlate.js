@@ -1,3 +1,4 @@
+// * Boiler Plate for Min Heap
 const top = 0;
 const parent = i => ((i + 1) >>> 1) - 1;
 const left = i => (i << 1) + 1;
