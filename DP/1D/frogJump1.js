@@ -19,13 +19,13 @@ function dfs(arr,index,dp)
     }
 
     let oneJump = Number(1e9+7);
-    if (index > 0)
+    if (index-1 >=0 )
     {
         oneJump = dfs(arr,index-1,dp) + Math.abs(arr[index] - arr[index-1]);
     }
 
     let twoJump = Number(1e9+7);
-    if (index > 1)
+    if (index-2 >= 0)
     {
         twoJump = dfs(arr,index-2,dp) + Math.abs(arr[index] - arr[index-2]);
     }
