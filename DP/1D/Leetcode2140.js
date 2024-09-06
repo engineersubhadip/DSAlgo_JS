@@ -1,26 +1,34 @@
-let arr = [[3,2],[4,3],[4,4],[2,5]];
+let arr = [[1,1],[2,2],[3,3],[4,4],[5,5]];
 
-let maxSum = 0;
 
-function backtracking(arr,runSum,index)
+function dfs(arr,index,dp)
 {
+    if (index === arr.length-1)
+    {
+        return dp[index];
+    }
     if (index >= arr.length)
     {
-        maxSum = Math.max(maxSum,runSum);
-        return;
+        return 0;
+    }
+    if (dp[index] !== -1)
+    {
+        return dp[index];
     }
 
-    // pick :-
-    runSum += arr[index][0];
-    // console.log("runSum Before",runSum);
-    backtracking(arr,runSum,index+arr[index][1]+1);
-    runSum -= arr[index][0];
-    // console.log("runSum After",runSum);
+    // solve :-
+    let solve = arr[index][0] + dfs(arr,index+arr[index][1]+1,dp);
+    let notSolve = dfs(arr,index+1,dp);
 
-    // not pick:-
-    backtracking(arr,runSum,index+1);
+    dp[index] = Math.max(solve,notSolve);
+
+    return dp[index];
 }
 
-backtracking(arr,0,0);
 
-console.log(maxSum);
+let dp = new Array(arr.length).fill(-1);
+dp[arr.length-1] = arr[arr.length-1][0];
+
+dfs(arr,0,dp);
+
+console.log(Math.max(...dp));
