@@ -1,10 +1,19 @@
-let arr = [1,5,11,5];
+let arr = [1,2,3,5];
 
 let sumTotal = arr.reduce(function(curr,acc){return curr+acc},0);
 
+// if sumTotal is ODD return false
+
 let target = sumTotal/2;
 
-function backtracking(index,arr,target)
+let dp = new Array();
+for (let i=0; i<arr.length; i++)
+{
+    let newArr = new Array(target+1).fill(-1);
+    dp.push(newArr);
+}
+
+function dfs(index,arr,target,dp)
 {
     if (target === 0)
     {
@@ -18,18 +27,25 @@ function backtracking(index,arr,target)
         }
         return false;
     }
+    if (dp[index][target] !== -1)
+    {
+        return dp[index][target];
+    }
 
     let take = false;
     if (arr[index] <= target)
     {
-        take = backtracking(index+1,arr,target-arr[index]);
+        take = dfs(index+1,arr,target-arr[index],dp);
     }
-    let notTake = false;
-    notTake = backtracking(index+1,arr,target);
 
-    return take || notTake;
+    let notTake = false;
+    notTake = dfs(index+1,arr,target,dp);
+
+    dp[index][target] = take || notTake;
+
+    return dp[index][target];
 }
 
-let ans = backtracking(0,arr,target);
+dfs(0,arr,target,dp);
 
-console.log(ans);
+console.log(dp[0][target]);
